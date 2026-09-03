@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.9.12112.369 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DarkModCore", "DarkModCore\DarkModCore.vcxproj", "{D2A44444-4444-4444-8444-444444444444}"
+EndProject
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DarkModDLL", "DarkModDLL\DarkModDLL.vcxproj", "{C1A11111-1111-4111-8111-111111111111}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2A44444-4444-4444-8444-444444444444} = {D2A44444-4444-4444-8444-444444444444}
+	EndProjectSection
+EndProject
+
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DarkModLauncher", "DarkModLauncher\DarkModLauncher.vcxproj", "{D2A22222-2222-4222-8222-222222222222}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C1A11111-1111-4111-8111-111111111111} = {C1A11111-1111-4111-8111-111111111111}
+		{D2A44444-4444-4444-8444-444444444444} = {D2A44444-4444-4444-8444-444444444444}
+	EndProjectSection
+EndProject
+
+Global
+
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+
+		{D2A44444-4444-4444-8444-444444444444}.Debug|x64.ActiveCfg = Debug|x64
+		{D2A44444-4444-4444-8444-444444444444}.Debug|x64.Build.0 = Debug|x64
+
+		{D2A44444-4444-4444-8444-444444444444}.Release|x64.ActiveCfg = Release|x64
+		{D2A44444-4444-4444-8444-444444444444}.Release|x64.Build.0 = Release|x64
+
+
+		{C1A11111-1111-4111-8111-111111111111}.Debug|x64.ActiveCfg = Debug|x64
+		{C1A11111-1111-4111-8111-111111111111}.Debug|x64.Build.0 = Debug|x64
+
+		{C1A11111-1111-4111-8111-111111111111}.Release|x64.ActiveCfg = Release|x64
+		{C1A11111-1111-4111-8111-111111111111}.Release|x64.Build.0 = Release|x64
+
+
+		{D2A22222-2222-4222-8222-222222222222}.Debug|x64.ActiveCfg = Debug|x64
+		{D2A22222-2222-4222-8222-222222222222}.Debug|x64.Build.0 = Debug|x64
+
+		{D2A22222-2222-4222-8222-222222222222}.Release|x64.ActiveCfg = Release|x64
+		{D2A22222-2222-4222-8222-222222222222}.Release|x64.Build.0 = Release|x64
+
+	EndGlobalSection
+
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+
+EndGlobal
