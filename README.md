@@ -1,6 +1,50 @@
-# 1C-CUSTOM-theme
-кастомный интерфейс для 1С, любая версия
-код на С++, перехваты и прочие приколы. можно посмотреть ознакомиться
-<img width="603" height="610" alt="image" src="https://github.com/user-attachments/assets/02bf2468-2508-417c-88a3-c9bb816137b3" />
-<img width="318" height="355" alt="image" src="https://github.com/user-attachments/assets/f75e6e19-06dd-45de-a585-062aeae5f6fe" />
-<img width="459" height="388" alt="image" src="https://github.com/user-attachments/assets/469295dc-4e17-4adf-83be-66b6dcd09955" />
+# 🎨 1C-CUSTOM-theme
+
+Утилита с графическим интерфейсом для быстрой настройки и кастомизации оформления Конфигуратора «1С:Предприятие». Никакой ручной правки реестра, поиска чужих `.reg`-файлов или сложных скриптов — смена и тонкая подгонка темы происходят в один клик.
+
+[![Download Latest Release](https://img.shields.io/badge/Скачать_утилиту-.exe-007ACC?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/BIXXEZ/1C-CUSTOM-theme/releases/latest)
+[![Platform](https://img.shields.io/badge/1C%3AEnterprise-8.3-yellow?style=for-the-badge)](https://v8.1c.ru/)
+[![License](https://img.shields.io/badge/License-Free-green?style=for-the-badge)](#)
+
+---
+
+## ⚡ Особенности
+
+* **Все в одном `.exe`**: работает портативно, не требует установки стороннего софта и рантаймов.
+* **Готовые пресеты**: переключение между популярными темными и светлыми цветовыми схемами.
+* **Детальный редактор палитры**: ручная настройка цветов любого элемента кода (ключевые слова, строки, комментарии, фон, выделения).
+* **Быстрое применение**: безопасное сохранение параметров без риска повредить конфигурационные файлы.
+
+---
+
+## 📸 Скриншоты
+
+### 1. Основной интерфейс
+<p align="center">
+  <img width="603" height="610" alt="Основной интерфейс" src="https://github.com/user-attachments/assets/02bf2468-2508-417c-88a3-c9bb816137b3" />
+</p>
+
+### 2. Выбор готовых тем
+<p align="center">
+  <img width="318" height="355" alt="Выбор темы" src="https://github.com/user-attachments/assets/f75e6e19-06dd-45de-a585-062aeae5f6fe" />
+</p>
+
+### 3. Тонкая настройка цветов и палитры
+<p align="center">
+  <img width="459" height="388" alt="Настройка палитры" src="https://github.com/user-attachments/assets/469295dc-4e17-4adf-83be-66b6dcd09955" />
+</p>
+
+---
+
+## 🚀 Быстрый старт
+
+1. Перейдите в раздел **[Releases](https://github.com/BIXXEZ/1C-CUSTOM-theme/releases/latest)** и скачайте актуальный `.exe`.
+2. Запустите программу, выберите готовую тему из списка или настройте цвета вручную, скорее всего потребуется детальная настройка палитры под конфигурацию.
+3. Примените настройки и запустите Конфигуратор.
+
+---
+
+## 💡 Системные требования
+
+* **ОС**: Windows 10 / 11
+* **Платформа**: 1С:Предприятие 8.3 (Конфигуратор)
