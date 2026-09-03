@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{D2A44444-4444-4444-8444-444444444444}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DarkModCore</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <!-- DEBUG -->
+  <!-- v145 is what is actually installed here, same as the other two
+       projects. Leaving PlatformToolset unset makes
+       Microsoft.Cpp.Default.props fall back to v100 and fail with
+       MSB8020. -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <!-- RELEASE -->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <!-- OUTPUT -->
+  <!-- The .lib goes to obj\, not bin\: it is an input to the other
+       three projects, not something anybody distributes. bin\ is what
+       gets zipped up. -->
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)obj\$(Configuration)\DarkModCore\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\DarkModCore\</IntDir>
+    <TargetName>DarkModCore</TargetName>
+  </PropertyGroup>
+  <!-- COMPILER -->
+  <!-- No Detours include path and no UI libraries on purpose. This
+       library is linked into an injected DLL as well as into two
+       exes, so anything it drags in gets loaded inside 1C. -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>
+        WIN32_LEAN_AND_MEAN;
+        NOMINMAX;
+        _CRT_SECURE_NO_WARNINGS;
+        UNICODE;
+        _UNICODE;
+        %(PreprocessorDefinitions)
+      </PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <!-- STATIC CRT -->
+  <!-- Must match the consumers exactly. A /MT library linked into an
+       /MTd exe fails at link time with duplicate runtime symbols, so
+       both flavours are built. -->
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <!-- SOURCE -->
+  <ItemGroup>
+    <ClCompile Include="DarkModCapture.cpp" />
+    <ClCompile Include="DarkModColor.cpp" />
+    <ClCompile Include="DarkModColorsJson.cpp" />
+    <ClCompile Include="DarkModMapping.cpp" />
+    <ClCompile Include="DarkModPaths.cpp" />
+    <ClCompile Include="DarkModPreset.cpp" />
+    <ClCompile Include="DarkModUi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DarkModCapture.h" />
+    <ClInclude Include="DarkModColor.h" />
+    <ClInclude Include="DarkModColorsJson.h" />
+    <ClInclude Include="DarkModMapping.h" />
+    <ClInclude Include="DarkModPaths.h" />
+    <ClInclude Include="DarkModPreset.h" />
+    <ClInclude Include="DarkModUi.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
