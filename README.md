@@ -71,6 +71,12 @@
 
 ---
 
+
+ПРИМЕРЫ В СЕРВЕРНОЙ БГУ 2
+<img width="1143" height="546" alt="image" src="https://github.com/user-attachments/assets/3a966329-d175-4f28-9809-499cfdc2c5c1" />
+<img width="1133" height="549" alt="image" src="https://github.com/user-attachments/assets/892f5d0e-b9a2-4192-9e3f-945986ce0353" />
+<img width="1140" height="559" alt="image" src="https://github.com/user-attachments/assets/a461a00a-4473-438e-b4ec-96153b91aa7f" />
+
 ## 💻 Системные требования
 
 * **ОС**: Windows 10 / 11 (x64)
